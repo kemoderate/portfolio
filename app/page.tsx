@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Briefcase, User, FolderGit2, Download } from 'lucide-react';
 
@@ -69,7 +69,7 @@ export default function Portfolio() {
     ]
   };
 
-  const scrollToSection = (section) => {
+  const scrollToSection = (section : string ) => {
     setActiveSection(section);
     setMenuOpen(false);
   };
