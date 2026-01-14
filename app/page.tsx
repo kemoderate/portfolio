@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Briefcase, User, FolderGit2, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Briefcase, User, FolderGit2, Download, Smartphone, ShoppingCart } from 'lucide-react';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -11,7 +11,7 @@ export default function Portfolio() {
     name: "Fahmi N M",
     username: "kemoderate",
     title: "Full Stack Developer",
-    bio: "Passionate developer specializing in JavaScript, Node.js, and database management. I build scalable web applications with modern technologies including EJS, SQLite, and PostgreSQL.",
+    bio: "Passionate full-stack developer specializing in mobile and web applications. Building scalable solutions with React Native, Node.js, Express, and modern database technologies including MongoDB and PostgreSQL.",
     location: "Bandung, Indonesia",
     email: "fahminomana@gmail.com", 
     github: "https://github.com/kemoderate",
@@ -19,20 +19,38 @@ export default function Portfolio() {
     
     skills: {
       languages: ["JavaScript", "Python", "SQL", "HTML/CSS"],
-      backend: ["Node.js", "Express.js", "EJS", "RESTful APIs"],
-      databases: ["PostgreSQL", "SQLite", "JSON Database"],
-      frontend: ["React", "Responsive Design", "Bootstrap"],
-      tools: ["Git", "GitHub", "VS Code", "npm"]
+      backend: ["Node.js", "Express.js", "RESTful APIs", "MongoDB"],
+      databases: ["PostgreSQL", "SQLite", "MongoDB", "JSON Database"],
+      frontend: ["React Native", "React", "EJS", "Responsive Design"],
+      tools: ["Git", "GitHub", "VS Code", "npm", "Expo"]
     },
     
     projects: [
+      {
+        title: "Phonebook App",
+        description: "Full-stack contact management application with React Native mobile interface and Express backend. Features CRUD operations, image upload with avatar management, real-time search, sorting, and pagination. Built with MongoDB for scalable data storage.",
+        tech: ["React Native", "MongoDB", "Express", "Node.js", "Expo"],
+        github: "https://github.com/kemoderate/phonebook-app",
+        demo: null,
+        featured: true,
+        icon: "smartphone"
+      },
+      {
+        title: "POS Application",
+        description: "Point of Sale system built with Express.js backend featuring inventory management, transaction processing, and sales reporting. Implements RESTful API architecture with PostgreSQL database for robust data handling.",
+        tech: ["Express.js", "PostgreSQL", "Node.js", "EJS", "RESTful API"],
+        github: "https://github.com/kemoderate/pos-app",
+        demo: null,
+        featured: true,
+        icon: "cart"
+      },
       {
         title: "BREADpostgre",
         description: "Full-stack CRUD application with PostgreSQL database integration. Features complete Browse, Read, Edit, Add, and Delete operations with server-side rendering using EJS templates.",
         tech: ["Node.js", "PostgreSQL", "EJS", "Express"],
         github: "https://github.com/kemoderate/BREADpostgre",
         demo: null,
-        featured: true
+        featured: false
       },
       {
         title: "BREADSQLITE",
@@ -40,7 +58,7 @@ export default function Portfolio() {
         tech: ["Node.js", "SQLite", "EJS", "Express"],
         github: "https://github.com/kemoderate/BREADSQLITE",
         demo: null,
-        featured: true
+        featured: false
       },
       {
         title: "BREAD-JSON",
@@ -48,7 +66,7 @@ export default function Portfolio() {
         tech: ["Node.js", "JSON", "EJS", "Express"],
         github: "https://github.com/kemoderate/BREAD-JSON",
         demo: null,
-        featured: true
+        featured: false
       },
       {
         title: "Rubicamp",
@@ -65,14 +83,25 @@ export default function Portfolio() {
         role: "Full Stack Developer",
         company: "Freelance / Personal Projects",
         period: "2019 - Present",
-        description: "Developing full-stack web applications with focus on CRUD operations, database management, and server-side rendering. Specialized in Node.js backends with multiple database implementations."
+        description: "Developing full-stack web and mobile applications with focus on scalable architecture. Specialized in React Native mobile development, Node.js backends with Express, and multi-database implementations (MongoDB, PostgreSQL, SQLite). Built production-ready applications including contact management systems and POS solutions."
       }
     ]
   };
 
-  const scrollToSection = (section : string ) => {
+  const scrollToSection = (section: string) => {
     setActiveSection(section);
     setMenuOpen(false);
+  };
+
+  const getProjectIcon = (iconType: string) => {
+    switch(iconType) {
+      case 'smartphone':
+        return <Smartphone size={64} className="opacity-50" />;
+      case 'cart':
+        return <ShoppingCart size={64} className="opacity-50" />;
+      default:
+        return <Code size={64} className="opacity-50" />;
+    }
   };
 
   return (
@@ -181,18 +210,18 @@ export default function Portfolio() {
             <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
               <h4 className="text-xl font-bold mb-4 text-blue-400">Who I Am</h4>
               <p className="text-gray-300 leading-relaxed">
-                I'm a Full Stack Developer based in Bandung, Indonesia, with a strong focus on building robust 
-                web applications. I specialize in server-side development with Node.js and have extensive 
-                experience working with multiple database systems including PostgreSQL, SQLite, and JSON-based storage.
+                I'm a Full Stack Developer based in Bandung, Indonesia, specializing in building modern 
+                mobile and web applications. With expertise in React Native for mobile development and 
+                Node.js/Express for backend systems, I create scalable solutions across multiple platforms.
               </p>
             </div>
             
             <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
               <h4 className="text-xl font-bold mb-4 text-blue-400">What I Do</h4>
               <p className="text-gray-300 leading-relaxed">
-                I create full-stack CRUD applications with clean architecture and efficient data management. 
-                My projects demonstrate proficiency in RESTful API design, server-side rendering with EJS, 
-                and database integration. I'm passionate about writing clean, maintainable code.
+                I develop full-stack applications from mobile apps to web services, with strong focus on 
+                clean architecture and efficient data management. My work includes contact management systems, 
+                POS applications, and various CRUD implementations using MongoDB, PostgreSQL, and other databases.
               </p>
             </div>
           </div>
@@ -241,7 +270,7 @@ export default function Portfolio() {
                 className="bg-slate-800/50 rounded-lg overflow-hidden border border-blue-500/20 hover:border-blue-500/40 transition-all hover:transform hover:scale-105"
               >
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-40 flex items-center justify-center">
-                  <Code size={64} className="opacity-50" />
+                  {getProjectIcon(project.icon || 'code')}
                 </div>
                 <div className="p-6">
                   <h4 className="text-2xl font-bold mb-3 text-blue-300">{project.title}</h4>
