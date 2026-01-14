@@ -82,7 +82,7 @@ export default function Portfolio() {
       {
         role: "Full Stack Developer",
         company: "Freelance / Personal Projects",
-        period: "2019 - Present",
+        period: "2023 - Present",
         description: "Developing full-stack web and mobile applications with focus on scalable architecture. Specialized in React Native mobile development, Node.js backends with Express, and multi-database implementations (MongoDB, PostgreSQL, SQLite). Built production-ready applications including contact management systems and POS solutions."
       }
     ]
