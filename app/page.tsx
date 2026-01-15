@@ -303,7 +303,7 @@ export default function Portfolio() {
                       <img
                         src={project.images[currentIdx]}
                         alt={`${project.title} - Screenshot ${currentIdx + 1}`}
-                        className="w-full h-full object-cover transition-all duration-300"
+                        className="w-full h-full object-contain transition-all duration-300"
                       />
 
                       {hasMultipleImages && (
