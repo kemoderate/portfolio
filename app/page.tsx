@@ -30,7 +30,7 @@ export default function Portfolio() {
         title: "Phonebook App",
         description: "Full-stack contact management application with React Native mobile interface and Express backend. Features CRUD operations, image upload with avatar management, real-time search, sorting, and pagination. Built with MongoDB for scalable data storage.",
         tech: ["React Native", "MongoDB", "Express", "Node.js", "Expo"],
-        github: "https://github.com/kemoderate/phonebook-app",
+        github: "https://github.com/kemoderate/PHONEBOOK",
         demo: null,
         featured: true,
         icon: "smartphone"
@@ -403,7 +403,7 @@ export default function Portfolio() {
             <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
               <Linkedin className="mx-auto mb-3 text-blue-400" size={32} />
               <h4 className="font-bold mb-2">LinkedIn</h4>
-              <p className="text-gray-400 text-sm">Connect with me</p>
+              <p className="text-gray-400 text-sm">Connect with me @{portfolio.linkedin}</p>
             </div>
           </div>
         </div>
