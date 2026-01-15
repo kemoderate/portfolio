@@ -33,7 +33,18 @@ export default function Portfolio() {
         github: "https://github.com/kemoderate/PHONEBOOK",
         demo: null,
         featured: true,
-        icon: "smartphone"
+        icon: "smartphone",
+         images: [
+
+          "/images/login.png",
+          "/images/AddCustomers.png",  
+          "/images/AddPurchases.png",  
+          "/images/Customer.png",
+          "/images/dashboard.png",
+          "/images/dashboard2.png",
+          "/images/AddSales.png",
+          "/images/Users.png",  
+        ],
       },
       {
         title: "POS Application",
@@ -106,7 +117,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Navigation */}
+     
       <nav className="fixed top-0 w-full bg-slate-900/90 backdrop-blur-md z-50 border-b border-blue-500/20">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -152,7 +163,7 @@ export default function Portfolio() {
         )}
       </nav>
 
-      {/* Hero Section */}
+     
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-6xl font-bold">
@@ -197,7 +208,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* About Section */}
+    
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 text-center">
@@ -247,7 +258,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
+  
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-4 text-center">
@@ -328,7 +339,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Experience Section */}
+    
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 text-center">
@@ -357,7 +368,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      
       <section className="py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h3 className="text-4xl font-bold mb-6">
@@ -409,7 +420,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Footer */}
+     
       <footer className="py-8 px-4 border-t border-blue-500/20 bg-slate-900">
         <div className="max-w-6xl mx-auto text-center text-gray-400">
           <p>© 2026 {portfolio.name}. Built with React and deployed on Vercel.</p>
