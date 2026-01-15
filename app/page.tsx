@@ -36,14 +36,14 @@ export default function Portfolio() {
         icon: "smartphone",
          images: [
 
-          "/images/login.png",
-          "/images/AddCustomers.png",  
-          "/images/AddPurchases.png",  
-          "/images/Customer.png",
-          "/images/dashboard.png",
-          "/images/dashboard2.png",
-          "/images/AddSales.png",
-          "/images/Users.png",  
+          "/images/pos-app/login.png",
+          "/images/pos-app/AddCustomers.png",  
+          "/images/pos-app/AddPurchases.png",  
+          "/images/pos-app/Customer.png",
+          "/images/pos-app/dashboard.png",
+          "/images/pos-app/dashboard2.png",
+          "/images/pos-app/AddSales.png",
+          "/images/pos-app/Users.png",  
         ],
       },
       {
