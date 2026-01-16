@@ -36,8 +36,8 @@ export default function Portfolio() {
         featured: true,
         icon: "smartphone",
         images: [
-          "/images/phonebook/addcontacts.png",
           "/images/phonebook/home.png",
+          "/images/phonebook/addcontacts.png",
 
         ],
       },
