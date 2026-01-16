@@ -36,6 +36,20 @@ export default function Portfolio() {
         featured: true,
         icon: "smartphone",
         images: [
+          "/images/phonebook/addcontacts.png",
+          "/images/phonebook/home.png",
+
+        ],
+      },
+      {
+        title: "POS Application",
+        description: "Point of Sale system built with Express.js backend featuring inventory management, transaction processing, and sales reporting. Implements RESTful API architecture with PostgreSQL database for robust data handling.",
+        tech: ["Express.js", "PostgreSQL", "Node.js", "EJS", "RESTful API"],
+        github: "https://github.com/kemoderate/pos-app",
+        demo: null,
+        featured: true,
+        icon: "cart",
+        images:[
 
           "/images/pos-app/login.png",
           "/images/pos-app/AddCustomers.png",
@@ -46,15 +60,6 @@ export default function Portfolio() {
           "/images/pos-app/AddSales.png",
           "/images/pos-app/Users.png",
         ],
-      },
-      {
-        title: "POS Application",
-        description: "Point of Sale system built with Express.js backend featuring inventory management, transaction processing, and sales reporting. Implements RESTful API architecture with PostgreSQL database for robust data handling.",
-        tech: ["Express.js", "PostgreSQL", "Node.js", "EJS", "RESTful API"],
-        github: "https://github.com/kemoderate/pos-app",
-        demo: null,
-        featured: true,
-        icon: "cart"
       },
       {
         title: "BREADpostgre",
